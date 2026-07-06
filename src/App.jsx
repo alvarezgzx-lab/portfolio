@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { Analytics } from "@vercel/analytics/react";
 
 
 // ─── TOKENS ────────────────────────────────────────────────────────────────
@@ -658,6 +659,7 @@ export default function App() {
       <Nav page={page} setPage={setPage}/>
       <main><Page setPage={setPage}/></main>
       <Footer setPage={setPage}/>
+      <Analytics />
     </div>
   );
 }
